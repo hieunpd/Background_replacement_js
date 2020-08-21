@@ -1,0 +1,67 @@
+<html>
+
+<head>
+   <!-- TensorFlow.js script -->
+   <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.8/dist/tf.min.js"></script> -->
+   <style>
+      .row {
+         display: flex;
+         text-align: center;
+      }
+
+      .column {
+         flex: 50%;
+         margin: auto;
+         vertical-align: middle;
+      }
+   </style>
+</head>
+
+<body>
+   <h2 align="center">
+      Portrait Segmentation </h1>
+      <!-- Divide the screen -->
+      <div id="main">
+         <div class="row">
+            <!-- Inputs -->
+            <div class="column">
+               <h3>Input Video</h3>
+               <!-- HTML Video-->
+               <video autoplay playsinline muted id="webcam" src="http://0.0.0.0:8000/" width="300"
+                  height="300"></video>
+            </div>
+            <!-- Outputs -->
+            <div class="column" style="vertical-align:top">
+
+               <h3>Output Video</h3>
+               <!-- HTML Canvas -->
+               <br>
+               <button id="start">Start</button>
+               <button id="stop">Stop</button>
+               <br><br><br>
+               <canvas width=300 height=300 id="mycanvas" crossorigin="anonymous"></canvas>
+               <br><br><br>
+               <!-- <a id="download"  download="blend.png">
+            <button type="button" onClick="download()">Download</button>
+            </a> -->
+            </div>
+         </div>
+         <div class="row">
+            <!-- <h3>Background Image</h3> -->
+            <!-- HTML Image -->
+            <img id="bg1" src="http://0.0.0.0:8000/bg.jpg" width="300" height="300" crossorigin="anonymous"
+               alt="background" vertical-align="bottom" style="display: none;">
+            <!-- <br><br> -->
+            <!-- <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"> -->
+         </div>
+      </div>
+</body>
+<!-- Main script -->
+<!-- <script type='text/javascript' src='./tf.min.js'></script> -->
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.2/dist/tf.min.js'></script>
+<script src="./build/stats.min.js"></script>
+<script src="index.js"> </script>
+
+
+
+</html>
